@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Draggable Exercises</title>
+    <style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-between;
+}
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #f0f0f0;
+    color:black;
+}
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #a09b9b;
+    color:black;
+}
+.relative-container {
+    position: relative;
+    width: 40%;
+    height: 300px;
+    margin: 20px auto;
+    border: 2px solid black;
+    background-color:grey;
+}
+.fixed-container {
+    position: fixed;
+    top: 50px;
+    left: 50px;
+    z-index: 10;
+}
+.draggable-box {
+    position: absolute;
+    padding: 20px;
+    background-color:rgb(93, 209, 93);
+    color: white;
+    border-radius: 5px;
+    cursor: move;
+    transition: transform 0.3s ease;
+}
+.draggable-box p {
+    margin: 0;
+    text-align: center;
+}
+.relative-container .draggable-box:hover {
+    transform: scale(1.05);
+}
+.fixed-container .draggable-box:hover {
+    transform: scale(1.05);
+}
+.relative-container .draggable-box:active {
+    transform: scale(1.1);
+}
+.fixed-container .draggable-box:active {
+    transform: scale(1.1);
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Draggable Exercises</h1>
+    </header>
+    <div class="relative-container">
+        <div class="draggable-box" id="draggable-box1">
+            <p>Drag Me Within Box</p>
+        </div>
+    </div>
+    <div class="fixed-container">
+        <div class="draggable-box" id="draggable-box2">
+            <p>Drag Me Within Window</p>
+        </div>
+    </div>
+    <footer>
+        <p>© 2024 Draggable Divs Exercise</p>
+    </footer>
+</body>
+</html>

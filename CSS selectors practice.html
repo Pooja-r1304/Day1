@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CSS Selectors Practice</title>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 0 10px;
+    }
+
+    header {
+      background-color: #ffffff;
+      padding: 16px 0;
+      border-bottom: 1px solid #ccc;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 24px;
+      font-weight: 600;
+      color: #333;
+    }
+
+    .nav-bar {
+      background-color: #333;
+      border-top: 1px solid #555;
+      border-bottom: 1px solid #555;
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      padding: 8px 0;
+    }
+
+    .nav-container a {
+      color: white;
+      font-size: 14px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .nav-container a:hover {
+      color: #ccc;
+    }
+
+    .selector-box {
+      background-color: #fcfcfc;
+      border: 1px solid #ddd;
+      margin-bottom: 8px;
+      padding: 12px 16px;
+      border-radius: 4px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    }
+
+    .type-demo p {
+      color: #555;
+      line-height: 1.5;
+    }
+
+    .highlight {
+      background-color: #ffff00;
+    }
+
+    #unique {
+      background-color: #f3f3f3;
+      border-left: 5px solid #cc3333;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      border: 1px solid #ccc;
+      padding: 6px;
+      border-radius: 4px;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 4px;
+      color: #333;
+      font-size: 14px;
+    }
+
+    .descendant-demo h2 {
+      color: #0056b3;
+    }
+
+    .child-demo ul > li {
+      list-style-type: disc;
+      margin-left: 20px;
+    }
+
+    .child-demo ul > li:first-child {
+      font-weight: 600;
+      color: #333;
+    }
+
+    .adjacent-demo h4 + p {
+      border-top: 1px dashed #999;
+      padding-top: 5px;
+      margin-top: 5px;
+    }
+
+    .general-demo h4 ~ p {
+      color: #444;
+      font-style: italic;
+    }
+
+    footer {
+      background-color: #fff;
+      padding: 12px 0;
+      border-top: 1px solid #ccc;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    footer p {
+      font-size: 12px;
+      color: #666;
+      margin: 0;
+    }
+
+    /* Replacing utility classes with direct element rules */
+    section h2 {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    section h3 {
+      font-size: 16px;
+      font-weight: 600;
+      color: #555;
+      margin-top: 8px;
+    }
+
+    section p {
+      font-size: 14px;
+      margin-top: 4px;
+    }
+
+    section span {
+      font-family: monospace;
+      background-color: #fef3c7;
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
+
+    @media (max-width: 640px) {
+      .selector-box {
+        padding: 10px 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>CSS Selectors Practice</h1>
+    </div>
+  </header>
+
+  <nav class="nav-bar">
+    <div class="container nav-container">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Contact</a>
+    </div>
+  </nav>
+
+  <main class="container" style="padding: 16px 0;">
+    <section class="selector-box type-demo">
+      <h2>Universal Selector Example</h2>
+      <p>This paragraph is styled using the universal selector (*), which applies to all elements.</p>
+    </section>
+
+    <section class="selector-box type-demo">
+      <h2>Type Selector Example</h2>
+      <h3>Headings and Paragraphs</h3>
+      <p>This is an example of a paragraph styled by the type selector.</p>
+    </section>
+
+    <section class="selector-box highlight">
+      <h2>Class Selector Example</h2>
+      <p>This section is styled using a class selector named <span>.highlight</span>.</p>
+    </section>
+
+    <section class="selector-box" id="unique">
+      <h2>ID Selector Example</h2>
+      <p>This section is styled using a named <span>#unique</span> ID selector.</p>
+    </section>
+
+    <section class="selector-box">
+      <h2>Attribute Selector Example</h2>
+      <label for="yourName">Type your name:</label>
+      <input type="text" id="yourName" placeholder="Your Name">
+    </section>
+
+    <section class="selector-box descendant-demo">
+      <h2>Descendant Selector Example</h2>
+      <div style="background-color: #f9f9f9; padding: 8px; border: 1px solid #ddd; border-radius: 4px;">
+        <p>This paragraph is inside a div and styled by a <span>.descendant-demo h2</span> selector.</p>
+      </div>
+    </section>
+
+    <section class="selector-box child-demo">
+      <h2>Child Selector Example</h2>
+      <ul style="padding-left: 0; margin-left: 0;">
+        <li>First child item styled using child Selector <span>ul > li</span>.</li>
+        <li>Another child item in the list.</li>
+      </ul>
+    </section>
+
+    <section class="selector-box adjacent-demo">
+      <h2>Adjacent Sibling Selector Example</h2>
+      <h4>This is a heading</h4>
+      <p>This paragraph is styled as an adjacent sibling to the above heading (<span>h4 + p</span>).</p>
+    </section>
+
+    <section class="selector-box general-demo">
+      <h2>General Sibling Selector Example</h2>
+      <h4>Another heading</h4>
+      <p>This paragraph is styled as a general sibling to the above heading (<span>h2 ~ p</span>).</p>
+      <p>Another sibling paragraph styled the same way.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>@ 2024 CSS Selectors Practice</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Display Property Examples</title>
+   <style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  padding: 20px;
+}
+header {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+header h1 {
+  margin-bottom: 10px;
+}
+nav a {
+  display: inline;
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+}
+nav a:hover {
+  text-decoration: underline;
+}
+main {
+  margin-top: 30px;
+}
+.block-example {
+  margin-bottom: 30px;
+}
+.block-item {
+
+  background-color:green;
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid green;
+  text-align: center;
+}
+.inline-example {
+  margin-bottom: 30px;
+  text-align: center;
+}
+.inline-item {
+  display: inline;
+  background-color: rgb(136, 208, 241);
+  padding: 5px;
+  margin: 5px;
+  border: 1px solid rgb(136, 208, 241);
+}
+.inline-block-example {
+  margin-bottom: 30px;
+  text-align: center;  
+}
+.inline-block-item {
+  display: inline-block;
+  background-color: orangered;
+  padding: 10px;
+  margin: 5px;
+  text-align: center;
+  border: 1px solid orangered;
+}
+footer {
+  margin-top: 40px;
+  padding: 15px;
+  text-align: center;
+  background-color: #333;
+  color: white;
+}
+   </style>
+</head>
+<body>
+  <header>
+    <h1>Display Property Examples</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Examples</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+  <main>
+    <section class="block-example">
+      <div class="block-item">Block Element 1 (display: block)</div>
+      <div class="block-item">Block Element 2 (display: block)</div>
+      <div class="block-item">Block Element 3 (display: block)</div>
+    </section>
+    <section class="inline-example">
+      <span class="inline-item">Inline Element 1</span>
+      <span class="inline-item">Inline Element 2</span>
+      <span class="inline-item">Inline Element 3</span>
+    </section>
+    <section class="inline-block-example">
+      <div class="inline-block-item">Inline-Box 1</div>
+      <div class="inline-block-item">Inline-Box 2</div>
+      <div class="inline-block-item">Inline-Box 3</div>
+    </section>
+  </main>
+  <footer>
+    @ 2024 Display Property Examples
+  </footer>
+
+</body>
+</html>
